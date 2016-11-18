@@ -1,0 +1,295 @@
+html {
+   overflow: hidden;
+   height: 100%;
+}
+body {
+   font-family: "Lucida", sans-serif;
+   background-color: #e9ebee;
+   height: 100%;
+   overflow: auto;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+#topbar {
+   z-index: 10;
+   position: fixed;
+   top: 0px;
+   width: 100%; height: 42px;
+   background-color: #3b5998;
+   margin-bottom:50px;
+}
+#f {
+   position: absolute;
+   top: 8px; left: 10px;
+   position: absolute;
+   border-radius: 2px;
+   width: 25px; height: 26px;
+   background-color: #ffffff;
+   color: #3b5998;
+   font-size: 2em; font-style: bold;
+   text-align: center;
+   overflow: hidden;
+}
+#f:hover {
+   color: #fff;
+   transition: 10s;
+}
+#search {
+   position: absolute;
+   padding-top:7px; padding-left: 10px;
+   top: 8px; left: 45px;
+   border-radius: 2px;
+   width: 400px; height: 19px;
+   background-color: #ffffff;
+   font-size:.85em;
+   color: #999999;
+}
+#search p:hover  {
+   color: white;
+   transition: 5s;
+}
+#sidebar {
+   font-size: .75em;
+   float: left;
+   position: fixed;
+   margin-top: 50px; margin-left: 10px
+}
+#sidebar li {
+   padding: 3px;
+}
+#sidebar a {
+   color: black;
+}
+.woym {
+   position: relative;
+   margin: auto;
+   margin-top: 50px;
+   padding-top: 10px;
+   width: 66%;
+   height: 145px;
+   font-size:.85em;
+   background-color: white;
+   border: .25px solid #ccc;
+   border-radius: 2px;
+}
+.woym a {
+   padding-left: 12px;
+   font-weight: bold;
+   color: #3b5998;
+}
+.woym hr {
+   border: 0px;
+   background-color: #d0d0d0;
+   height: 1px;
+}
+.woym p {
+   padding: 30px 0 30px 12px;
+   color: #999999;
+}
+.woym p:hover {
+   visibility: hidden;
+}
+.woym img{
+   float: left;
+   margin: 12px 12px;
+   border: .10px solid #cccccc;
+}
+#postbtn {
+   position: absolute;
+   right: 5px;
+   border: none;
+   border-radius: 2px;
+   height: 22px; width: 50px;
+   background-color: #3b5998;
+   outline: none;
+   font-size: .95em;
+   color: white;
+}
+#postbtn:hover {
+   background-color: #4060a4;
+   box-shadow: 0px 0px 5px #273a62 inset;
+   transition: linear .25s;
+   cursor: pointer;
+}
+#postbtn:active {
+   background-color: #30487b;
+   transition: linear .25s;
+   cursor: pointer;
+}
+
+#okbtn {
+   position: absolute;
+   right: 10px; top: 90px;
+   border: none;
+   border-radius: 2px;
+   height: 22px; width: 50px;
+   background-color: #3b5998;
+   outline: none;
+   font-size: .95em;
+   color: white;
+}
+#okbtn:hover {
+   background-color: #4060a4;
+   box-shadow: 0px 0px 5px #273a62 inset;
+   transition: linear .25s;
+   cursor: pointer;
+}
+#okbtn:active {
+   background-color: #30487b;
+   transition: linear .2s;
+}
+.modal {
+   position: fixed;
+   left: 0; top: 0;
+   display: none;
+   z-index: 2;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.25);
+}
+.modal-content {
+   position: relative;
+   background-color: #3b5998;
+   margin: auto;
+   margin-top: 100px;
+   border: 1px solid #888;
+   border-radius: 4px;
+   width: 40vw; height: 150px;
+   overflow: hidden;
+   box-shadow: 0px 0px 5px #666;
+}
+.modal-content h1 {
+   position: absolute;
+   top: 10px; left: 10px;
+   color: white;
+   font-weight: bold;
+}
+#nouser {
+   position: absolute;
+   top: 30px;
+   width: 100%; height: 100%;
+   background-color: #e5e7e7;
+}
+#nouser h2 {
+   background-color: white;
+   height: 45px;
+   padding-top: 35px;
+   border-bottom: 1px solid #888;
+   font-weight: normal;
+   text-align: center;
+}
+
+.close {
+    color: #afbdd4;
+    position: absolute;
+    top: 5px; right: 10px;
+    font-size: 20px;
+}
+.close:hover, .close:focus {
+   color: white;
+   cursor: pointer;
+   transition: linear .2s;
+}
+.posthead {
+   position: relative;
+   margin: auto;
+   margin-top: 10px;
+   padding-top: 10px;
+   width: 66%;
+   height: 410px;
+   font-size:.85em;
+   background-color: white;
+   border: .25px solid #ccc;
+   border-radius: 2px;
+}
+.posthead a {
+   position: absolute;
+   padding-right: 10px;
+   top: 11px; left: 75px;
+   font-weight: bold;
+   color: #3b5998;
+}
+.posthead hr {
+   border: 0px;
+   background-color: #d0d0d0;
+   height: 1px;
+}
+.posthead h1 {
+   position: absolute;
+   top: 50px;
+   left: 75px;
+   font-size:.8em;
+   color: #999999;
+}
+.posthead p {
+   margin: 10px 20px 20px 15px;
+   color: #999999;
+}
+.posthead img{
+   position: absolute;
+   top: 11px;
+   left: 12px;
+   border: .10px solid #cccccc;
+}
+.postbody {
+   position: absolute;
+   top: 70px;
+   border-top: .25px solid #ccc;
+   border-bottom: .25px solid #ccc;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: 100%;
+
+   overflow: hidden;
+}
+#postimage {
+   width: 95%;
+   background-color: #999;
+   height: 250px;
+   margin: auto;
+
+}
+.postcomment {
+   position: relative;
+   margin: auto;
+   margin-top:340px;
+   border: .25px solid #ccc;
+   width: 95%;
+   height: 60px;
+   background-color: #f6f7f9;
+   border-radius: 2px;
+   overflow: hidden;
+}
+.postcomment img{
+   position: absolute;
+   top: 7px;
+   left: 7px;
+}
+#comment {
+   position: absolute;
+   top: 7px;
+   left: 60px;
+   background-color: white;
+   height: 45px;
+   width: 100%;
+   border: .25px solid #ccc;
+   border-radius: 2px;
+   color: #999999;
+}
+#comment p {
+   margin-top: 15px;
+}
+#comment p:hover {
+   visibility: hidden;
+}
+#rightborder{
+   position: absolute;
+   right: -1px;
+   top: 7px;
+   background-color:#f6f7f9;
+   height: 47px; width: 8px;
+   border-left:.25px solid #ccc;
+   border-right:.25px solid #ccc;
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Facebook</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+   <div id="topbar">
+      <div id="f">f</div>
+      <div id="search">Search for places, people, and things</div>
+   </div>
+
+   <div id="sidebar">
+      <ul>
+         <li><a href="">Login</a></li>
+         <li><a href="">Login</a></li>
+         <li><a href="">Login</a></li>
+         <li><a href="">Login</a></li>
+         <li><a href="">Login</a></li>
+      </ul>
+
+   </div>
+   <div class="woym">
+      <a href="">Photo/Video</a>
+      <hr>
+      <img src="img/profile.jpg" width="45px"></img>
+      <p>What's on your mind?</p>
+      <hr>
+      <button id="postbtn">Post</button>
+      <div id="errormsg" class="modal">
+         <div class="modal-content">
+            <h1>Couldn't Update Status</h1>
+            <span class="close">×</span>
+            <div id="nouser">
+               <h2>An error occured. Please try again later.</h2>
+               <button id="okbtn">Okay</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      var errormsg = document.getElementById('errormsg');
+      var postbtn = document.getElementById("postbtn");
+      var okbtn = document.getElementById("okbtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      postbtn.onclick = function() {errormsg.style.display = "block";}
+      span.onclick = function() {errormsg.style.display = "none";}
+      okbtn.onclick = function () {errormsg.style.display = "none"; }
+      window.onclick = function(event) {if (event.target == modal) {errormsg.style.display = "none";}}
+   </script>
+
+   <div class="posthead">
+      <img src="img/profile.jpg" width="45px"></img>
+      <a href="">Person name shared this persons photo</a>
+      <h1>3 hours ago</h1>
+      <div class="postbody">
+         <div id=postimage></div>
+      </div>
+      <div class="postcomment">
+         <img src="img/profile.jpg" width="45px"></img>
+         <div id="comment"><p>Write a comment...</p></div>
+         <div id="rightborder"></div>
+      </div>
+   </div>
+
+</body>
