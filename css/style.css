@@ -19,6 +19,9 @@ body {
    background-color: #3b5998;
    margin-bottom:50px;
 }
+#search p:hover{
+   visibility: hidden;
+}
 #f {
    position: absolute;
    top: 8px; left: 10px;
@@ -41,10 +44,6 @@ body {
    font-size:.85em;
    color: #999999;
 }
-#search p:hover  {
-   color: white;
-   transition: 5s;
-}
 #sidebar {
    font-size: .75em;
    float: left;
@@ -52,17 +51,29 @@ body {
    margin-top: 50px; margin-left: 10px
 }
 #sidebar li {
-   padding: 3px;
+   padding: 5px;
 }
 #sidebar a {
    color: black;
+}
+#sidebar img {
+   padding-right: 5px;
+}
+#sidebar p{
+   color: #6a6a6a;
+   padding-top: 15px;
+   font-size: .95em;
+}
+#sidebar li:hover {
+   background-color: #dddfe2;
+   border-radius: 2px;
 }
 .woym {
    position: relative;
    margin: auto;
    margin-top: 50px;
    padding-top: 10px;
-   width: 55%;
+   width: 52%;
    height: 145px;
    font-size:.85em;
    background-color: white;
@@ -74,6 +85,9 @@ body {
    font-weight: bold;
    color: #3b5998;
 }
+.woym a:hover {
+   color: #2f4562;
+}
 .woym hr {
    border: 0px;
    background-color: #d0d0d0;
@@ -83,7 +97,7 @@ body {
    padding: 30px 0 30px 12px;
    color: #999999;
 }
-.woym p:hover {
+.woym p:hover{
    visibility: hidden;
 }
 .woym img{
@@ -113,7 +127,6 @@ body {
    transition: linear .25s;
    cursor: pointer;
 }
-
 #okbtn {
    position: absolute;
    right: 10px; top: 90px;
@@ -152,7 +165,7 @@ body {
    margin-top: 100px;
    border: 1px solid #888;
    border-radius: 4px;
-   width: 40vw; height: 150px;
+   width: 350px; height: 150px;
    overflow: hidden;
    box-shadow: 0px 0px 5px #666;
    font-size: .85em;
@@ -177,7 +190,6 @@ body {
    font-weight: normal;
    text-align: center;
 }
-
 .close {
     color: #afbdd4;
     position: absolute;
@@ -194,7 +206,7 @@ body {
    margin: auto;
    margin-top: 10px;
    padding-top: 10px;
-   width: 55%;
+   width:52%;
    height: 410px;
    font-size:.85em;
    background-color: white;
@@ -240,34 +252,29 @@ body {
    width: 100%;
    overflow: hidden;
 }
-
 #postimage {
    width: 95%;
    background-color: #999;
    height: 250px;
    margin: auto;
-
 }
 .postcomment {
    position: relative;
    margin: auto;
    margin-top:340px;
    border: .25px solid #ccc;
-   width: 95%;
-   height: 60px;
+   width: 95%; height: 60px;
    background-color: #f6f7f9;
    border-radius: 2px;
    overflow: hidden;
 }
 .postcomment img{
    position: absolute;
-   top: 7px;
-   left: 7px;
+   top: 7px; left: 7px;
 }
 #comment {
    position: absolute;
-   top: 7px;
-   left: 60px;
+   top: 7px; left: 60px;
    background-color: white;
    height: 45px;
    width: 100%;
@@ -283,33 +290,39 @@ body {
 }
 #rightborder{
    position: absolute;
-   right: -1px;
-   top: 7px;
+   right: -1px; top: 7px;
    background-color:#f6f7f9;
    height: 47px; width: 8px;
    border-left:.25px solid #ccc;
    border-right:.25px solid #ccc;
 }
-
-
 #openchat {
    position: fixed;
    bottom:0px; right:25px;
-   z-index: 2;
    background-color: #f6f7f9;
    border: .25px solid #ccc;
    border-bottom: 0px;
+   z-index: 1;
    border-top-right-radius: 3px;
    border-top-left-radius: 3px;
    padding: 2px 2px 8px 0;
    width: 150px; height: 20px;
 }
-
 #openchat button{
    border: 0px;
    background-color: transparent;
    outline: none;
    font-weight: bold;
+}
+#openchat:hover {
+   background-color: #fbfcfe;
+   box-shadow: 0px -2px 5px #d1d2d4 inset;
+   transition: .5s;
+}
+#openchat:active {
+   background-color: #e9ebee;
+   box-shadow: 0px -2px 5px #d1d2d4 inset;
+   transition: .5s;
 }
 #greendot {
    color: green;
@@ -333,7 +346,7 @@ body {
    border-bottom: 0px;
    border-top-left-radius: 4px;
    border-top-right-radius: 4px;
-   width: 200px; height: 270px;
+   width: 200px; height: 260px;
    overflow: hidden;
    box-shadow: 0px 0px 10px #666;
 }
@@ -346,6 +359,17 @@ body {
 #closechat p{
    padding: 5px;
    font-size: .85em;
+}
+#closechat:hover {
+   background-color: #4060a4;
+   box-shadow: 0px 0px 5px #273a62 inset;
+   transition: linear .25s;
+   cursor: pointer;
+}
+#closechat:active {
+   background-color: #30487b;
+   transition: linear .25s;
+   cursor: pointer;
 }
 .chat-content button {
    float: right;
@@ -371,4 +395,19 @@ body {
 }
 #chatuser img {
    border: .10px solid #cccccc;
+}
+#searchchat {
+   width: 100%;
+   height: 100%;
+   border-top: 1px solid #cccccc;
+   color: #999999;
+   font-size: .85em;
+   padding: 8px 5px;
+}
+#searchchat i{
+   font-size: .95em;
+   margin-right: 5px;
+}
+ #searchchat p:hover {
+    visibility: hidden;
 }
