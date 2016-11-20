@@ -1,17 +1,159 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Video</title>
+   <title>Facebook</title>
    <meta charset="utf-8">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/base.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
-<body>
-   <div id="topbar">
-      <a href="index.html" id="f">f</a>
-      <div id="search">← Go back home...</div>
-   </div>
 
+<body>
+   <div id="topbar"></div>
+   <div id="maincontent">
+      <div id="topbar">
+         <a id="f" href="index.html">f</a>
+         <div id="search">
+            <p>Search for places, people, and things...</p>
+         </div>
+         <div id="logoff"><a href="">logoff</a></div>
+      </div>
+      <div id="sidebar">
+         <ul>
+            <li><img src="img/profile.jpg" width="15px"></img><a href="">Unknown User</a></li>
+            <li><img src="img/edit.png" height="15px"><a href="">Edit Profile</a></li>
+            <p>FAVORITES</p>
+            <li><img src="img/newsfeed.png" width="15px"><a href="index.html">News Feed</a></li>
+            <li><img src="img/messages.png" width="15px"><a href="">Messages</a></li>
+            <li><img src="img/events.png" width="15px"><a href="">Events</a></li>
+            <li><img src="img/saved.png" height="15px"><a href="">Saved</a></li>
+            <li><img src="img/shops.png" height="15px"><a href="">Shops</a></li>
+            <p>PAGES</p>
+            <li><img src="img/pagesfeed.png" height="15px"><a href="">Pages Feed</a></li>
+            <li><img src="img/likepages.png" height="15px"><a href="">Like Pages</a></li>
+            <li><img src="img/createad.png" height="15px"><a href="">Create Ad</a></li>
+            <li><img src="img/createpage.png" height="15px"><a href=""></a>Create Page</li>
+            <p>GROUPS</p>
+            <li><img src="img/skull.png" height="15px"><a href="">Group</a></li>
+            <li><img src="img/trophy.png" height="15px"><a href="">Group</a></li>
+            <li><img src="img/gavel.png" height="15px"><a href="">Group</a></li>
+            <li><img src="img/movie.png" height="15px"><a href="">Group</a></li>
+            <p>APPS</p>
+            <li><img src="img/videocamrea.png" height="15px"><a href="video.html">Live Video</a></li>
+            <li><img src="img/gamepad.png" height="15px"><a href="">Games</a></li>
+            <li><img src="img/onthisday.png" height="15px"><a href="">On This Day</a></li>
+            <li><img src="img/pokes.png" height="15px"><a href="">Pokes</a></li>
+            <li><img src="img/photos.png" height="15px"><a href="">Photos</a></li>
+         </ul>
+
+      </div>
+      <div class="woym">
+         <a href="video.html">Photo/Video</a>
+         <hr>
+         <img src="img/profile.jpg" width="45px"></img>
+         <p>What's on your mind?</p>
+         <hr>
+         <button id="postbtn">Post</button>
+      </div>
+
+      <div id="errormsg" class="errormodal">
+         <div class="error-content">
+            <h1>Couldn't Update Status</h1>
+            <span class="close">×</span>
+            <div id="nouser">
+
+               <h2>No user detected. Please log in and try again.</h2>
+
+               <button id="okbtn">Okay</button>
+            </div>
+         </div>
+      </div>
+
+      <div id="openchat">
+         <button> <span id="greendot">•</span> Chat (5) </button>
+      </div>
+      <div id="chatwindow" class="chatmodal">
+         <div class="chat-content">
+            <div id="closechat">
+               <button>×</button>
+               <p>Chat</p>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="searchchat">
+               <p><i class="material-icons">search</i>Search...</p>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         var errormsg = document.getElementById('errormsg');
+         var postbtn = document.getElementById("postbtn");
+         var okbtn = document.getElementById("okbtn");
+         var span = document.getElementsByClassName("close")[0];
+
+         postbtn.onclick = function() {errormsg.style.display = "block";}
+         span.onclick = function() {errormsg.style.display = "none";}
+         okbtn.onclick = function () {errormsg.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == errormsg) {errormsg.style.display = "none";}}
+
+         var chatwindow = document.getElementById('chatwindow');
+         var openchat = document.getElementById("openchat");
+         var closechat = document.getElementById("closechat");
+
+         openchat.onclick = function() {chatwindow.style.display = "block";}
+         closechat.onclick = function () {chatwindow.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == chatwindow) {chatwindow.style.display = "none";}}
+      </script>
+
+      <div id="rightcol">
+         <ul>
+            <li><img src="img/events.png" width="20px"><a id="eventinvites" href ="">5 event invites</a></li>
+            <hr>
+            <li><h1>TRENDING</h1></li>
+            <hr>
+            <li><i class="material-icons">trending_up</i><a href ="">Who Am I?</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">Everyone Is Gone</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">What Is This Place?</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">I Feel Totally Alone</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><a href="">▾ See More</a></li>
+            <hr>
+            <img src ="img/golem.jpg"width="240px"height="160px"></img>
+            <li><a href="">This text goes under the ad</a></li>
+            <li><h1>And it looks just like this</h1></li>
+            <hr>
+            <img src ="img/golem.jpg"width="240px"height="160px"></img>
+            <li><a href="">This text goes under the ad</a></li>
+            <li><h1>And it looks just like this</h1></li>
+         </ul>
+      </div>
+   </div>
 </body>
