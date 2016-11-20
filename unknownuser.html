@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Unknown User</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/base.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+   <div id="topbar"></div>
+   <div id="mainprofilecontent">
+      <div id="topbar">
+         <a id="f" href="index.html">f</a>
+         <div id="search">
+            <p>Search for places, people, and things...</p>
+         </div>
+      </div>
+
+      <div id="coverphoto"></div>
+      <div class="profileinfo" id="profileintro">
+         <img src="img/intro.png" height="25px"></img>
+         <h1>Intro</h1>
+         <ul>
+            <li><i class="material-icons">home</i>
+               Lives in
+               <a href="">location unknown.</a>
+            </li>
+            <li><i class="material-icons">location_on</i>
+               From
+               <a href="">location unknown.</a>
+            </li>
+      </div>
+      <div class="profileinfo" id="profilephotos">
+         <img src="img/photos2.png" width="25px"></img>
+         <h1>Photos</h1>
+      </div>
+      <div class="profileinfo" id="profilefriends">
+         <img src="img/friends.png" width="25px"></img>
+         <h1>Friends</h1>
+         <p>• 5 </p>
+      </div>
+
+      <div id="profilepost">
+         <a href="video.html">Photo/Video</a>
+      </div>
+      <div id="profilepost">
+            <div id="profileposthead">
+            <img src="img/pencil.png" width="15px"></img>
+            <a href="">Status</a>
+            <img src="img/camera.png" width="15px"></img>
+            <a href="">Photo/Video</a>
+            <img src="img/lifeevent.png" width="15px"></img>
+            <a href="">Life Event</a>
+         </div>
+         <div id="profilepostbody">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>What's on your mind?</p>
+         </div>
+         <button id="postbtn">Post</button>
+      </div>
+      <div id="errormsg" class="errormodal">
+         <div class="error-content">
+            <h1>Couldn't Update Status</h1>
+            <span class="close">×</span>
+            <div id="nouser">
+               <h2>No user detected. Please log in and try again.</h2>
+               <button id="okbtn">Okay</button>
+            </div>
+         </div>
+      </div>
+
+
+
+
+      <div id="openchat">
+         <button> <span id="greendot">•</span> Chat (5) </button>
+      </div>
+      <div id="chatwindow" class="chatmodal">
+         <div class="chat-content">
+            <div id="closechat">
+               <button>×</button>
+               <p>Chat</p>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="searchchat">
+               <p><i class="material-icons">search</i>Search...</p>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         var errormsg = document.getElementById('errormsg');
+         var postbtn = document.getElementById("postbtn");
+         var okbtn = document.getElementById("okbtn");
+         var span = document.getElementsByClassName("close")[0];
+
+         postbtn.onclick = function() {errormsg.style.display = "block";}
+         span.onclick = function() {errormsg.style.display = "none";}
+         okbtn.onclick = function () {errormsg.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == errormsg) {errormsg.style.display = "none";}}
+
+         var chatwindow = document.getElementById('chatwindow');
+         var openchat = document.getElementById("openchat");
+         var closechat = document.getElementById("closechat");
+
+         openchat.onclick = function() {chatwindow.style.display = "block";}
+         closechat.onclick = function () {chatwindow.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == chatwindow) {chatwindow.style.display = "none";}}
+      </script>
+   </div>
+</body>

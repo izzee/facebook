@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Unknown User</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/base.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+   <div id="topbar"></div>
+   <div id="maincontent">
+      <div id="topbar">
+         <a id="f" href="index.html">f</a>
+         <div id="search">
+            <p>Search for places, people, and things...</p>
+         </div>
+         <div id="logoff"><a href="">logoff</a></div>
+      </div>
+   <div id="maincontent">
+
+
+      <div id="openchat">
+         <button> <span id="greendot">•</span> Chat (5) </button>
+      </div>
+      <div id="chatwindow" class="chatmodal">
+         <div class="chat-content">
+            <div id="closechat">
+               <button>×</button>
+               <p>Chat</p>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="chatuser">
+               <img src="img/profile.jpg" width="30px"></img>
+               <a href="">User Name</a>
+               <span id="greendot">•</span>
+            </div>
+            <div id="searchchat">
+               <p><i class="material-icons">search</i>Search...</p>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         var errormsg = document.getElementById('errormsg');
+         var postbtn = document.getElementById("postbtn");
+         var okbtn = document.getElementById("okbtn");
+         var span = document.getElementsByClassName("close")[0];
+
+         postbtn.onclick = function() {errormsg.style.display = "block";}
+         span.onclick = function() {errormsg.style.display = "none";}
+         okbtn.onclick = function () {errormsg.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == errormsg) {errormsg.style.display = "none";}}
+
+         var chatwindow = document.getElementById('chatwindow');
+         var openchat = document.getElementById("openchat");
+         var closechat = document.getElementById("closechat");
+
+         openchat.onclick = function() {chatwindow.style.display = "block";}
+         closechat.onclick = function () {chatwindow.style.display = "none"; }
+         window.onclick = function(event) {if (event.target == chatwindow) {chatwindow.style.display = "none";}}
+      </script>
+   </div>
+</body>
