@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Unknown User</title>
+   <title>Saved</title>
    <meta charset="utf-8">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/base.css">
@@ -13,14 +13,62 @@
    <div id="topbar"></div>
    <div id="maincontent">
       <div id="topbar">
-         <a id="f" href="index.html">f</a>
+         <div id="f">f</div>
          <div id="search">
-            <p>Search for places, people, and things...</p>
+            <p>Return home once you are saved...</p>
          </div>
-         <div id="logoff"><a href="">logoff</a></div>
       </div>
-   <div id="maincontent">
 
+      <div class="leftcol">
+         <ul>
+            <li><img src="img/profile.jpg" width="15px"></img><a href="unknownuser.html">Unknown User</a></li>
+            <li><img src="img/edit.png" height="15px"><a href="">Edit Profile</a></li>
+            <p>FAVORITES</p>
+            <li><img src="img/newsfeed.png" width="15px"><a href="index.html">News Feed</a></li>
+            <li><img src="img/messages.png" width="15px"><a href="messages.html">Messages</a></li>
+            <li><img src="img/events.png" width="15px"><a href="events.html">Events</a></li>
+            <li><img src="img/saved.png" height="15px"><a href="saved.html">Saved</a></li>
+            <li><img src="img/shops.png" height="15px"><a href="shops.html">Shops</a></li>
+            <p>PAGES</p>
+            <li><img src="img/pagesfeed.png" height="15px"><a href="pagesfeed.html">Pages Feed</a></li>
+            <li><img src="img/likepages.png" height="15px"><a href="likepages.html">Like Pages</a></li>
+            <li><img src="img/createad.png" height="15px"><a href="createad.html">Create Ad</a></li>
+            <li><img src="img/createpage.png" height="15px"><a href="createpage.html">Create Page</a></li>
+            <p>GROUPS</p>
+            <li><img src="img/skull.png" height="15px"><a href="group.html">Group</a></li>
+            <li><img src="img/trophy.png" height="15px"><a href="group.html">Group</a></li>
+            <li><img src="img/gavel.png" height="15px"><a href="group.html">Group</a></li>
+            <li><img src="img/movie.png" height="15px"><a href="group.html">Group</a></li>
+            <p>APPS</p>
+            <li><img src="img/videocamrea.png" height="15px"><a href="video.html">Live Video</a></li>
+            <li><img src="img/gamepad.png" height="15px"><a href="">Games</a></li>
+            <li><img src="img/onthisday.png" height="15px"><a href="">On This Day</a></li>
+            <li><img src="img/pokes.png" height="15px"><a href="">Pokes</a></li>
+            <li><img src="img/photos.png" height="15px"><a href="">Photos</a></li>
+         </ul>
+
+      </div>
+      <div class="woym">
+         <a href="video.html">Photo/Video</a>
+         <hr>
+         <img src="img/profile.jpg" width="45px"></img>
+         <p>What's on your mind?</p>
+         <hr>
+         <button id="postbtn">Post</button>
+      </div>
+
+      <div id="errormsg" class="errormodal">
+         <div class="error-content">
+            <h1>Couldn't Update Status</h1>
+            <span class="close">×</span>
+            <div id="nouser">
+
+               <h2>No user detected. Please log in and try again.</h2>
+
+               <button id="okbtn">Okay</button>
+            </div>
+         </div>
+      </div>
 
       <div id="openchat">
          <button> <span id="greendot">•</span> Chat (5) </button>
@@ -81,5 +129,112 @@
          closechat.onclick = function () {chatwindow.style.display = "none"; }
          window.onclick = function(event) {if (event.target == chatwindow) {chatwindow.style.display = "none";}}
       </script>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody" id="imgpost">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+            <img id="postpic" src="img/golem.jpg" height="275px"</img>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody" id="imgpost">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+            <img id="postpic" src="img/golem.jpg" height="275px"</img>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="post">
+         <img src="img/profile.jpg" width="45px"></img>
+         <a href="">Unknown User</a>
+         <h1>3 hours ago • location unknown</h1>
+         <div class="postbody" id="imgpost">
+            <h2> Hellow this is my ppost bla blah blah </h2>
+            <img id="postpic" src="img/golem.jpg" height="275px"</img>
+         </div>
+         <div id="comment">
+            <img src="img/profile.jpg" width="45px"></img>
+            <p>Write a comment...</p>
+         </div>
+      </div>
+
+      <div class="rightcol">
+         <ul>
+            <li><img src="img/events.png" width="20px"><a id="eventinvites" href ="events.html">5 event invites</a></li>
+            <hr>
+            <li><h1>TRENDING</h1></li>
+            <hr>
+            <li><i class="material-icons">trending_up</i><a href ="">Who Am I?</a></li>
+            <li><p>0 people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">Everyone Is Gone</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">What Is This Place?</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><i class="material-icons">trending_up</i><a href ="">I Feel Totally Alone</a></li>
+            <li><p>100 billion people talking about this</p></li>
+            <li><a href="">▾ See More</a></li>
+            <hr>
+            <img src ="img/golem.jpg"width="240px"height="160px"></img>
+            <li><a href="">This text goes under the ad</a></li>
+            <li><h1>And it looks just like this</h1></li>
+            <hr>
+            <img src ="img/golem.jpg"width="240px"height="160px"></img>
+            <li><a href="">This text goes under the ad</a></li>
+            <li><h1>And it looks just like this</h1></li>
+         </ul>
+      </div>
    </div>
 </body>
